@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+  <h1>{{ movie.or_title }} (<a href="{{ url_for('main.year', year=movie.year) }}">{{ movie.year }}</a>)</h1>
+  <h2>{{ movie.pt_title }}</h2>
+{% endblock %}

@@ -1,0 +1,22 @@
+<table class="table table-hover">
+  <tr>
+    <td>
+      <a href="{{ url_for('main.movie', movie_id=movie._id) }}">
+        {{ movie.or_title }}
+      </a> (<a href="{{ url_for('main.year', year=movie.year) }}">{{ movie.year }}</a>)
+      <br>
+      {{ movie.pt_title }}
+      <br>
+      {{ _('Director') }}: <a href="{{ url_for('main.person', person_id=movie.director.id) }}">
+        {{ movie.director.name }}
+      </a>
+      <br>
+      {{ _('Actors') }}:
+      {% for actor in movie.actors %}
+        <a href="{{ url_for('main.person', person_id=actor.id) }}">
+          {{ actor.name }}
+        </a>
+      {% endfor %}
+    </td>
+  </tr>
+</table>
