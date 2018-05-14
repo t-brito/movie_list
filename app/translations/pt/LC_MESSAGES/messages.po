@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-13 20:00+0100\n"
+"POT-Creation-Date: 2018-05-14 01:52+0100\n"
 "PO-Revision-Date: 2018-05-13 19:13+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
@@ -36,8 +36,8 @@ msgid "New"
 msgstr "Novo"
 
 #: app/templates/new.html:4
-msgid "Under Construction"
-msgstr "Em Construção"
+msgid "Coming soon..."
+msgstr "Brevemente..."
 
 #: app/templates/person.html:4
 #, python-format
@@ -48,4 +48,3 @@ msgstr "Filmes de %(person)s"
 #, python-format
 msgid "Movies from %(year)s"
 msgstr "Filmes de %(year)s"
-
