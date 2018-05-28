@@ -2,20 +2,19 @@
   <tr>
     <td>
       <a href="{{ url_for('main.movie', movie_id=movie._id) }}">
-        {{ movie.or_title }}
-      </a> (<a href="{{ url_for('main.year', year=movie.year) }}">{{ movie.year }}</a>)
+        {{ movie.or_title }}</a> (<a href="{{ url_for('main.year', year=movie.year) }}">{{ movie.year }}</a>)
+      <a href="https://www.imdb.com/title/{{ movie._id }}" target="_blank">
+        <img width="15" height="15" alt="IMDb" src="{{ url_for('static', filename='imdb.ico') }}"></a>
       <br>
       {{ movie.pt_title }}
       <br>
       {{ _('Director') }}: <a href="{{ url_for('main.person', person_id=movie.director.id) }}">
-        {{ movie.director.name }}
-      </a>
+        {{ movie.director.name }}</a>
       <br>
       {{ _('Actors') }}:
       {% for actor in movie.actors %}
         <a href="{{ url_for('main.person', person_id=actor.id) }}">
-          {{ actor.name }}
-        </a>
+          {{ actor.name }}</a>
       {% endfor %}
     </td>
   </tr>
